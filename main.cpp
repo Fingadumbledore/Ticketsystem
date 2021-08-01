@@ -8,41 +8,47 @@
 using namespace std;
 
 int main()
-{  start();
-     do
- {
-    
-    system ("clear");
+{ 
+     start();
 
-    string input;
-    menue();
+  do
+ {
+    string finput;
+    startmenue();
 
     cout << "input: ";
-    cin >> input;
+    cin >> finput;
 
-    if (input == "T" || input == "t") 
+    switch (finput)
     {
-        Ticket();
-    }
-    else if (input == "G" || input == "g")
-    {
-        Gutschein();
-    }
-    else if (input == "H" || input == "h")
-    {
-       hilfe();
-    }
-    else if (input == "O" || input == "o")
-    {
-        GUI();
-    }
-    else if (input == "V" || input == "v")
-    {
+    case 'V':
         verwalten();
+        break;
+
+    case 'T' :
+        Ticket();
+        break;
+
+    case 'G' :
+        Gutschein();
+        break;
+
+    case 'H' :
+        hilfe();
+        break;
+        
+    case 'O':
+        GUI();
+        break;
+    
+    default:
+        break;
     }
-    
-    else { cout << "Error\n"; }
-    
+     
+   system ("clear");
+   
  } while (true);
+
+
 
 }

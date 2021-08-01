@@ -1,4 +1,5 @@
 #include <iostream>
+#include "rabatt.cpp"
 using namespace std;
 
 int TicketMaxAnzahl = 300;
@@ -6,13 +7,45 @@ int Personenanzahl = 0;
 float Preiskind = 13;
 float PreisFamilie = 50;
 float PreisErwachsene = 20;
-float Preiskleingruppe = 300 ;
+float Preiskleingruppe = 300;
 float Preisgroßgruppe = 500;
 string name;
+float gesammtpreis;
+
+
+string veranstaltung; 
+string Datum;
+
+int Rabattfrage(){
+    string input;
+    cout << "Besitzen sie einen Rabatt Coupon [J]a [N]ein: ";
+    cin >> input;
+    if (input == "J" || input == "j")
+    {
+     cout << "Rabat";
+    }
+    else 
+        return;
+    
+}
+
+int createTicket(){
+
+        
+        
+        cout << "Veranstaltung: ";
+        cin >> veranstaltung;
+        cout << "Datum: ";
+        cin >> Datum;
+
+        
+
+
+}
 
 int Ticketbearbeitung(){
-   
-    string preis;
+   string preis;
+    
     cout << "[T]icket anzahl ändern oder Preis [K]ind [E]rwachsene [F]amilie [G]roßgruppe [S]kleingruppe ändern";
     cin >> preis;
     if (preis == "T" || preis == "t")
@@ -61,32 +94,37 @@ int drawGruppenticket(){
 
 
 int Familie(){
+    
    cout << "Namen Familienmitglieder durch Komma getrennt: ";
    cin >> name;
+   Rabattfrage();
 
 }
  
  int Grossgruppe() {
-
+     Rabattfrage();
 
  }
 
  int kleingruppe(){
+     Rabattfrage();
 
 
 
  }
 
 int Kind(){
-
+    
     cout << "Name: ";
     cin >> name;
     drawticket();
+    Rabattfrage();
 
 
 
 }
 int erwachsende(){
+    Rabattfrage();
     cout << "Name: ";
     cin >> name;
     drawticket();
@@ -95,7 +133,7 @@ int erwachsende(){
 
 
 
-int Ticket()
+ int Ticket()
 {string input;
     cout << " [G]ruppe [E]inzeln [F]amilie: ";
     cin >> input; 

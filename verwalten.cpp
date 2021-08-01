@@ -2,32 +2,39 @@
 #include "gutschein.cpp"
 #include "ticket.cpp"
 #include "hilfe.cpp"
+#include "rabatt.cpp"
 using namespace std;
 
 int verwalten (){
 
- string art;
- cout << "[G]utscheine verwalten [T]icket's verwalten [S]ystem verwalten [H]ilfe: ";
+ char(1) art;
+ cout << "[G]utscheine verwalten [T]icket's verwalten [S]ystem verwalten [R]abatt [H]ilfe: ";
  cin >> art;
-if (art == "G" || art == "g")
+    
+switch (art)
 {
-    cout << "Gutscheine Verwalten";
-    Ticketbearbeitung();
-}
+case "G" || "g":
+    Gutscheinbearbeitung();
+    break;
 
-else if (art == "T" || art == "t")
-{
-    cout << "Ticket's verwalten";
+case "T" || "t":
     Ticketbearbeitung();
-}
-else if (art == "S" || art == "s")
-{
-    cout << "Ticket system verwalten";
-}
-else if (art == "H" || art == "h")
-{
+    break;
+
+case "S" || "s":
+    cout << "Ticketsystem bearbeiten";
+    break;
+
+case "H" || "h":
     bearbeitungshilfe();
-}
+    break;
 
+case "R" || "r":
+    createRabatt();
+    break;
+
+default:
+    break;
+}
 
 }

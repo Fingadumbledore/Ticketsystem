@@ -18,7 +18,24 @@ void start()
   
 }
 
-void menue()
+int gutscheinmeu(){
+    cout << "[Gutschein Menue]";
+
+}
+
+int ticketmenue(){
+     cout << "[Ticket Menue]";
+
+
+}
+
+int verwaltenmenue(){
+     cout << "[Verwaltungs Menue]";
+
+
+}
+
+void startmenue()
 {
     cout << "[T]icket [G]utschein [H]ilfe [O]berflaeche [V]erwalten\n";   
 }
