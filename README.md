@@ -13,9 +13,7 @@ Grundfunktionen
 | 1             | yes           |  no   |
 | 2             | yes           |  yes  |
 
-#Instalation
-
-
+# Instalation
 
 - das Repository mit `git clone https://github.com/Fingadumbledore/Ticketsystem.git` klonen
 
