@@ -5,6 +5,10 @@ using namespace std;
 int Rabatwert;
 string Rabatmotto;
 float Rabattpreis;
+int Rabattanzahl;
+int Rabattwert;
+int Rab = 0;
+string Rinput;
 
 
 int createRabatt(){
@@ -12,6 +16,23 @@ int createRabatt(){
     cin >> Rabatwert;
     cout << "Rabatmotto: ";
     cin >> Rabatmotto;
+     cout << "Rabatt [M]it oder [O]hne Gutschein: ";
+     cin >> Rinput;
+     if (Rinput == "M" || Rinput == "m")
+     {
+        Rab = 1;
+     }
+     else if (Rinput == "O" || Rinput == "o")
+     {
+         Rab = 2;
+     }
+     else if (Rinput == "H" || Rinput == "h")
+     {
+         RabattHilfe();
+     }
+     
+     else
+        cout << "Error!!! ";
 
 
 }
