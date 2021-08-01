@@ -19,31 +19,30 @@ int main()
     cout << "input: ";
     cin >> finput;
 
-    switch (finput)
+    if (finput == "V" || finput == "v" )
     {
-    case 'V':
-        verwalten();
-        break;
-
-    case 'T' :
-        Ticket();
-        break;
-
-    case 'G' :
-        Gutschein();
-        break;
-
-    case 'H' :
-        hilfe();
-        break;
-        
-    case 'O':
-        GUI();
-        break;
-    
-    default:
-        break;
+         verwalten();
     }
+    else if (finput == "T" || finput == "t")
+    {
+        Ticket();
+    }
+    else if (finput == "G" || finput == "g")
+    {
+        Gutschein();
+    }
+     else if (finput == "H" || finput == "h")
+    {
+        hilfe();
+    }
+     else if (finput == "O" || finput == "o")
+    {
+        GUI();
+    }
+    else
+     cout << "Wrong Input!!!";
+    
+    
      
    system ("clear");
    

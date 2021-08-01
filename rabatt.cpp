@@ -28,7 +28,7 @@ int createRabatt(){
      }
      else if (Rinput == "H" || Rinput == "h")
      {
-         RabattHilfe();
+         Rabatthilfe();
      }
      
      else
