@@ -3,7 +3,6 @@
 #include "ticket.cpp"
 #include "menue.cpp"
 
-
 using namespace std;
 
 void hilfe(){
@@ -28,6 +27,7 @@ int main()
 
   do
  {
+     
     string finput;
     startmenue();
 
@@ -46,14 +46,32 @@ int main()
     {
         hilfe();
     }
+    else if (finput == "B" || finput == "b")
+    {
+        string e;
+        cout << "[T]icket, [G]utschein, [R]abatt bearbeiten: ";
+        cin >> e;
+        if (e == "T" || e == "t")
+        {
+            Ticketbearbeitung();
+        }
+        else if (e == "G" || e == "g")
+        {
+            Gutscheinbearbeitung();
+        }
+        else if (e == "R" || e == "r")
+        {
+            Rabattbearbeiten();
+        }
+          
+    }
+    
     else
      cout << "Wrong Input!!!";
      break;
-    
-         
+           
    system ("clear");
    
  } while (true);
-
 
 }
