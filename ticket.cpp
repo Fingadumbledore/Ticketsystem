@@ -10,6 +10,7 @@ float Preiskleingruppe = 300;
 float Preisgroßgruppe = 500;
 string name;
 float gesammtpreis;
+string Ticketart;
 
 int Rabatwert;
 string Rabatmotto;
@@ -17,12 +18,20 @@ float Rabattpreis;
 int Rabattanzahl;
 int Rabattwert;
 int f = 0;
+string q;
+
+int ticketform(){
+    
+
+    cout << " [G]ruppe [E]inzeln [F]amilie: ";
+
+}
 
 int createRabatt(){
     int Rab = 0;
     string Rinput;
 
-    cout <<"Rabatwert: ";
+    cout <<"Rabatwert(%): ";
     cin >> Rabatwert;
     if (Rabatwert > 0)
     {
@@ -41,8 +50,6 @@ int createRabatt(){
       }
     }
     
-    
-    
 }
 
 
@@ -53,6 +60,11 @@ void Tickethilfe(){
 
 
   cout << "Dies wird die Hilfe für Ticket's";
+}
+
+int Rabattbearbeiten(){
+
+    cout << "Rabattbearbeiten";
 }
 
 int Rabattfrage(){
@@ -118,35 +130,58 @@ int Ticketbearbeitung(){
 }
 
 int drawticket(){ 
+    if (Ticketart == "G")
+    {
+        cout << "Gruppenticket";
+    }
+    else if (Ticketart == "F")
+    {
+        cout << "Familienticket";
+    }
+    else if (Ticketart == "E")
+    {
+        cout << "Einzelticket";
+    }
+    
+    
+    
     cout << "Ticket:";
 }
 
 
 
-
-int drawGruppenticket(){
-
-    cout << "Gruppenticket:";
-}
-
-
-
-
 int Familie(){
     
+    Ticketart = "F";
    cout << "Namen Familienmitglieder durch Komma getrennt: ";
    cin >> name;
-   if (f < 1)
+   if (Rabattwert > 0)
    {
-        Rabattfrage();Rabattfrage();
+        Rabattfrage();
+   }
+   gesammtpreis = PreisFamilie; 
+   
+   if (f = 1)
+   {
+       Rabat();
+   }
+   cout << "\nweiteres Ticket kaufen [J]a [N]ein: ";
+   cin >> q;
+   if (q == "J" || q == "j")
+   {
+       ticketform();
+   }
+   else if (q == "N" || q == "n")
+   {
+        drawticket();
    }
    
-
-  
 
 }
  
  int Grossgruppe() {
+
+     Ticketart = "G";
      if (Rabattwert > 0)
    {
         Rabattfrage();
@@ -156,11 +191,22 @@ int Familie(){
    {
        Rabat();
    }
-   drawticket();
+   cout << "\nweiteres Ticket kaufen [J]a [N]ein: ";
+   cin >> q;
+   if (q == "J" || q == "j")
+   {
+       ticketform();
+   }
+   else if (q == "N" || q == "n")
+   {
+        drawticket();
+   }
 
  }
 
  int kleingruppe(){
+
+     Ticketart = "G";
      if (Rabattwert > 0)
    {
         Rabattfrage();
@@ -170,12 +216,24 @@ int Familie(){
    {
        Rabat();
    }
-   drawticket();
+   cout << "\nweiteres Ticket kaufen [J]a [N]ein: ";
+   cin >> q;
+   if (q == "J" || q == "j")
+   {
+       ticketform();
+   }
+   else if (q == "N" || q == "n")
+   {
+        drawticket();
+   }
+   
+   
 
  }
 
 int Kind(){
     
+    Ticketart = "E";
     cout << "Name: ";
     cin >> name;
     drawticket();
@@ -188,12 +246,23 @@ int Kind(){
    {
        Rabat();
    }
-   drawticket();
+   cout << "\nweiteres Ticket kaufen [J]a [N]ein: ";
+   cin >> q;
+   if (q == "J" || q == "j")
+   {
+       ticketform();
+   }
+   else if (q == "N" || q == "n")
+   {
+        drawticket();
+   }
 
 
 
 }
 int erwachsende(){
+
+    Ticketart = "E";
     cout << "Name: ";
     cin >> name;
     if (Rabattwert > 0)
@@ -207,15 +276,23 @@ int erwachsende(){
        Rabat();
    }
    
-    drawticket();
-
+    cout << "\nweiteres Ticket kaufen [J]a [N]ein: ";
+   cin >> q;
+   if (q == "J" || q == "j")
+   {
+       ticketform();
+   }
+   else if (q == "N" || q == "n")
+   {
+        drawticket();
+   }
 }
 
 
 
  int Ticket()
-{string input;
-    cout << " [G]ruppe [E]inzeln [F]amilie: ";
+{string input;    
+    ticketform();
     cin >> input; 
 
     if (input == " G" || input == "g")
@@ -248,7 +325,6 @@ int erwachsende(){
             erwachsende();
         }
         
-        
     }
     else if (input == "F" || input == "f")
     {
@@ -256,3 +332,5 @@ int erwachsende(){
     }
     
 }
+
+
