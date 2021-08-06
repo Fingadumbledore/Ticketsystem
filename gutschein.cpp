@@ -1,5 +1,5 @@
 #include <iostream>
-#include "rabatt.cpp"
+
 using namespace std;
 
 int GutscheinMaxAnzahl = 20;
@@ -7,6 +7,12 @@ string Gutscheineigentuemer;
 float Gutscheinwert;
 string Gutscheinspruch;
 
+
+void Gutscheinhilfe(){
+
+  cout <<"Dies wird die hilfe für Gutscheine";
+
+}
 
 int Gutscheinbearbeitung (){
 
@@ -20,12 +26,15 @@ int drawGutschein(){
 }
 
 int creatGutschein(){
-       cout << "Name Gutscheininhaber: ";
-       cin >> Gutscheineigentuemer;
        cout << "Gutscheinwert: ";
        cin >> Gutscheinwert;
-       cout << "[Optional] Spruch auf Gutschein: ";
-       cin >> Gutscheinspruch;
+       if (Gutscheinwert > 0)
+       {
+          cout << "[Optional] Spruch auf Gutschein: ";
+          cin >> Gutscheinspruch;
+       }
+       
+       
 
 
 }
@@ -56,8 +65,5 @@ else if (input == "K" || input == "k")
 {
     Gutscheinkauf();
 }
-
-
-
 
 }

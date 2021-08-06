@@ -1,15 +1,30 @@
 #include <iostream>
-#include "window.cpp"
 #include "gutschein.cpp"
 #include "ticket.cpp"
 #include "menue.cpp"
-#include "hilfe.cpp"
-#include "verwalten.cpp"
+
+
 using namespace std;
+
+void hilfe(){
+
+  cout << " Die Bedienung der Software ist simple sie müssen lediglich den Buchstagen der in den [] Klammern steht eigeben zum Navigieren.";
+  cout << "sollten sie weiteres eingeben müssen dann wird dies dort stehen.";
+
+}
+
+int einstellungen(){
+
+    createTicket();
+    creatGutschein();
+    createRabatt();
+}
 
 int main()
 { 
      start();
+     cin.get();
+     einstellungen();
 
   do
  {
@@ -19,11 +34,7 @@ int main()
     cout << "input: ";
     cin >> finput;
 
-    if (finput == "V" || finput == "v" )
-    {
-         verwalten();
-    }
-    else if (finput == "T" || finput == "t")
+    if (finput == "T" || finput == "t")
     {
         Ticket();
     }
@@ -31,23 +42,18 @@ int main()
     {
         Gutschein();
     }
-     else if (finput == "H" || finput == "h")
+    else if (finput == "H" || finput == "h")
     {
         hilfe();
     }
-     else if (finput == "O" || finput == "o")
-    {
-        GUI();
-    }
     else
      cout << "Wrong Input!!!";
+     break;
     
-    
-     
+         
    system ("clear");
    
  } while (true);
-
 
 
 }

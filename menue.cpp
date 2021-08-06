@@ -14,7 +14,8 @@ void start()
     cout << "        TTTTT             iiiii               cc               kkkk     kk           eeee                     TTTTTTT \n";
     cout << "        TTTTT             iiiii                ccccccc         kkkk       kk         eeeeeeeeeeeeeeeeeee      TTTTTTT \n";
 
-    cout << "created by @fingadumbledore                                                                                      V 0.4 \n";
+    cout << "created by @fingadumbledore | V 0.4                                                                           [ENTER] \n";
+   
   
 }
 
@@ -29,14 +30,10 @@ int ticketmenue(){
 
 }
 
-int verwaltenmenue(){
-     cout << "[Verwaltungs Menue]";
-
-
-}
 
 void startmenue()
 {
-    cout << "[T]icket [G]utschein [H]ilfe [O]berflaeche [V]erwalten\n";   
+    system ("clear");
+    cout << "[T]icket [G]utschein [H]ilfe \n";   
 }
 
