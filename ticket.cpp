@@ -22,7 +22,7 @@ int createRabatt(){
     int Rab = 0;
     string Rinput;
 
-    cout <<"Rabatwert: ";
+    cout <<"Rabatwert(%): ";
     cin >> Rabatwert;
     if (Rabatwert > 0)
     {
