@@ -3,6 +3,10 @@
 #include "ticket.cpp"
 #include "menue.cpp"
 
+string einput;
+string serveradresse;
+
+
 using namespace std;
 
 void hilfe(){
@@ -19,17 +23,61 @@ int einstellungen(){
     createRabatt();
 }
 
+int verbindung(){
+    cout << "Login\n";
+    cout << "Server Adresse: ";
+    cin >> serveradresse;
+    
+}
+
+int starteinstellungen(){
+    cout << "[N]eues Ticket erstellen\n" << "[T]icket laden\n" << "[A]lle Tickets anzeigen\n" << "[E]inlogen\n" << "Input: ";
+    cin >> einput;
+    if (einput == "N" || einput == "n")
+    {
+        einstellungen();
+    }
+    else if (einput == "T" || einput == "t")
+    {
+        cout << "noch nicht verfügbar";
+    }
+    else if (einput == "A" || einput == "a")
+    {
+        cout << "noch nicht verfügbar";
+    }
+    else if (einput == "E" || einput == "e")
+    {
+        verbindung();
+    }
+    
+    
+    
+    
+
+}
+
+
+
+
+
+
+
+
+
 int main()
-{ 
+{     
      start();
      cin.get();
-     einstellungen();
+     starteinstellungen();
+     
 
   do
  {
      
+     
     string finput;
     startmenue();
+    
 
     cout << "input: ";
     cin >> finput;

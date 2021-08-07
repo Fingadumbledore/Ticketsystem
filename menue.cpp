@@ -15,6 +15,7 @@ void start()
     cout << "        TTTTT             iiiii                ccccccc         kkkk       kk         eeeeeeeeeeeeeeeeeee      TTTTTTT \n";
 
     cout << "created by @fingadumbledore | V 0.4                                                                           [ENTER] \n";
+    
      
 }
 
@@ -33,4 +34,6 @@ void startmenue()
     system ("clear");
     cout << "[T]icket [G]utschein [H]ilfe \n";   
 }
+
+
 

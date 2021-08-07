@@ -6,6 +6,9 @@ int GutscheinMaxAnzahl = 20;
 string Gutscheineigentuemer;
 float Gutscheinwert;
 string Gutscheinspruch;
+string Gutscheinspruch1;
+string Gutscheinspruch2;
+string Ginput;
 
 
 void Gutscheinhilfe(){
@@ -26,11 +29,20 @@ int drawGutschein(){
 }
 
 int creatGutschein(){
-       cout << "Gutscheinwert: ";
-       cin >> Gutscheinwert;
+       cout << "Gutscheinwert [F]est [N]icht Fest: "; 
+       cin >> Ginput;
+       if (Ginput == "F" || Ginput == "f")
+       {
+           cout << "Gutscheinwert: ";
+           cin >> Gutscheinwert;
+       }
+       
+       
+       
+       
        if (Gutscheinwert > 0)
        {
-          cout << "[Optional] Spruch auf Gutschein: ";
+          cout << "Spruch auf Gutschein: ";
           cin >> Gutscheinspruch;
        }
        
