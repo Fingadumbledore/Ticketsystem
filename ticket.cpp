@@ -60,7 +60,6 @@ int createRabatt(){
     
 }
 
-
 string veranstaltung; 
 string Datum;
 

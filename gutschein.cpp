@@ -10,7 +10,7 @@ string Gutscheinspruch1;
 string Gutscheinspruch2;
 string Ginput;
 
-
+//Gutscheinhilfe
 void Gutscheinhilfe(){
 
   cout <<"Dies wird die hilfe für Gutscheine";

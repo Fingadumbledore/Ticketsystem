@@ -9,6 +9,7 @@ string serveradresse;
 
 using namespace std;
 
+//hilfe
 void hilfe(){
 
   cout << " Die Bedienung der Software ist simple sie müssen lediglich den Buchstagen der in den [] Klammern steht eigeben zum Navigieren.";

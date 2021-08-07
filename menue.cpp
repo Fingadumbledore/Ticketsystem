@@ -1,6 +1,7 @@
 #include <iostream>
 using namespace std;
 
+//Start
 void start()
 {
     cout << "    TTTTTTTTTTTTTT        iiiii                     ccccc      kkkk             kk   eeeeeeeeeeeeeeeeeee  TTTTTTTTTTTTTTTT \n";
