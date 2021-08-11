@@ -1,0 +1,43 @@
+Für Version 1.0
+bei mehreren  Gutschein abgleich mit dem maximum
+draw ticket bei mehreren tickets z.b. gruppe einzeln familie
+create ticket Datum festlegen und oder beim kauf vom ticket datum wählen
+Auswahl der Sprache
+Datum nach pc uhr
+bei der erstellung von tickets und gutscheinen auswahl von einfacher modus und advanced modus 
+einfacher modus mit assistent
+frage ist zb. Familienticket verfügbar
+mehrere tickets einer art speichern?
+löschen von Tickets eventuel vorerst variablen auf null setzen später auch aus db löschen
+tickets laden
+zurück ins menü funktion und schritt zurück
+gutschein codes random erzeugen
+verschiedene ticket arten
+individuelle Gutscheinsprüche
+individuelle Rabattmottos
+individuelle tickets vom veranstalter
+steuern merwertsteuer
+tickets in db eintragen
+alle tickets anzeigen lassen
+passwort schützen
+login
+Tickets zum ausdrucken
+falls ticket nicht konfiguriert wurde am anfang nicht vorhanden
+
+
+
+
+Für Version 1.5
+code aufräumen 
+modularer gestalten
+software modulater gestalten
+db auf server
+zugriff von verschiedenen clients
+weitere Sprachen
+
+Für Version2
+GUI als Webserver
+
+
+
+

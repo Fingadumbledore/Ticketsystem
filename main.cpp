@@ -1,10 +1,13 @@
 #include <iostream>
-#include "gutschein.cpp"
-#include "ticket.cpp"
-#include "menue.cpp"
+#include "DEgutschein.cpp"
+#include "DEticket.cpp"
+#include "DEmenue.cpp"
+
 
 string einput;
 string serveradresse;
+string Sprache;
+string Land;
 
 
 using namespace std;
@@ -83,10 +86,39 @@ int starteinstellungen(){
 
 
 int main()
-{     
-     start();
-     cin.get();
-     starteinstellungen();
+{    cout << "Language: [DE] [EN] [ES] [FR] \n";
+     cout << "Input: ";
+     cin >> Sprache;
+     if (Sprache == "DE" || Sprache == "de" || Sprache == "De")
+     {
+         cout << "Land: [D]eutschland [E]ngland [F]rankreich [S]panien\n ";
+         cin >> Land;
+         system ("clear");
+         start();
+         cin.get();
+         starteinstellungen();
+     }
+     else if (Sprache == "EN" || Sprache == "en" || Sprache == "En")
+     {
+        cout << "Country: [G]ermany [EN]gland [S]pain [F]rance\n";
+        cout << "Input: ";
+        cin >> Land;
+        cout << "Sprache noch nicht verfügbar";
+     }
+     else if (Sprache == "ES" || Sprache == "es" || Sprache == "Es")
+     {
+         cout << "País: [A]lemania [I]nglaterra [E]spaña [F]rancia\n";
+         cout << "Entrada";
+         cin >> Land;
+         cout << "Sprache noch nicht verfügbar";
+     }
+     else if (Sprache == "FR" || Sprache == "fr" || Sprache == "Fr")
+     {
+         cout << "Pays: [A]llemagne [An]gleterre [E]spagne [F]rancea\n";
+         cout << "Entrée";
+         cin >> Land;
+         cout << "Sprache noch nicht verfügbar";
+     }
      
 
   do
