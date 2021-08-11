@@ -6,6 +6,8 @@
 
 ### Version 0.1
 Grundfunktionen
+![Screenshot.](https://github.com/Fingadumbledore/Ticketsystem/blob/main/media/Startscreen.png)
+![Screenshot.](https://github.com/Fingadumbledore/Ticketsystem/blob/main/media/Auswahl.png)
 
 
 | VERSION       |GUTSCHEINE     | GUI   | 
