@@ -86,7 +86,7 @@ int starteinstellungen(){
 
 
 int main()
-{    cout << "Language: [DE] [EN] [ES] [FR] \n";
+{    cout << "Language: [DE] [EN]  \n";
      cout << "Input: ";
      cin >> Sprache;
      if (Sprache == "DE" || Sprache == "de" || Sprache == "De")
@@ -105,20 +105,7 @@ int main()
         cin >> Land;
         cout << "Sprache noch nicht verfügbar";
      }
-     else if (Sprache == "ES" || Sprache == "es" || Sprache == "Es")
-     {
-         cout << "País: [A]lemania [I]nglaterra [E]spaña [F]rancia\n";
-         cout << "Entrada";
-         cin >> Land;
-         cout << "Sprache noch nicht verfügbar";
-     }
-     else if (Sprache == "FR" || Sprache == "fr" || Sprache == "Fr")
-     {
-         cout << "Pays: [A]llemagne [An]gleterre [E]spagne [F]rancea\n";
-         cout << "Entrée";
-         cin >> Land;
-         cout << "Sprache noch nicht verfügbar";
-     }
+     
      
 
   do

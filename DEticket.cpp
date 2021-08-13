@@ -19,6 +19,7 @@ int gruppenanzahl;
 int Teilnehmer;
 int e;
 int zwisch;
+string steuer;
 string q;
 string l;
 int gru;
@@ -38,6 +39,8 @@ string begrenzung;
 string veranstaltung; 
 string Datum;
 string Rinput;
+float steuern;
+float preisohnesteuern;
 
 //Diese Funktion dient im Moment noch als Placeholder in zukunft soll über diese funktion das zurück gehen möglich sein
 int ticketform(){
@@ -251,6 +254,8 @@ int createTicket(){
         cin >> zinpuz;
         if (zinpuz == "P" || zinpuz == "p")
         {
+            cout << "Stuern [A]utomatisch mit einberechnen [O]hne: ";
+            cin >> steuer;
             cout << "Preis Kind: ";
             cin >> Preiskind;
             cout << "Preis Erwachsene: ";
@@ -329,10 +334,12 @@ int drawticket(){
             {
                 system ("clear");
                 cout << "Gruppeneinzelticket Preis: " << gesammtpreis << "€\n";
+                cout << "MwSt: " << steuern << "\n";
+                cout << "Preis ohne MwST: " << preisohnesteuern << "\n";
                 if (m == "0")
                 {
                     cout <<"Datum nicht festgelegt";
-                }
+                } 
                 cout << Datum;
                 
                 
@@ -343,6 +350,8 @@ int drawticket(){
         {
             system ("clear");
             cout << "Gruppenticket Preis: " << gesammtpreis << "€";
+            cout << "MwSt: " << steuern << "\n";
+            cout << "Preis ohne MwST: " << preisohnesteuern << "\n";
             if (m == "0")
                 {
                     cout <<"Datum nicht festgelegt";
@@ -358,6 +367,8 @@ int drawticket(){
     {
         system ("clear");
         cout << "Familienticket Preis: " << gesammtpreis << "€";
+        cout << "MwSt: " << steuern << "\n";
+        cout << "Preis ohne MwST: " << preisohnesteuern << "\n";
         if (m == "0")
                 {
                     cout <<"Datum nicht festgelegt";
@@ -369,6 +380,8 @@ int drawticket(){
     {
         system ("clear");
         cout << "Einzelticket Preis: " << gesammtpreis <<"€";
+        cout << "MwSt: " << steuern << "\n";
+        cout << "Preis ohne MwST: " << preisohnesteuern << "\n";
         if (m == "0")
                 {
                     cout <<"Datum nicht festgelegt";
